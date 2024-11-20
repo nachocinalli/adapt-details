@@ -1,0 +1,118 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "details",
+  "_classes": "",
+  "_layout": "full",
+  "title": "",
+  "displayTitle": "",
+  "body": "",
+  "instruction": "",
+  "_setCompletionOn": "allItems",
+  "_items": [
+    {
+      "title": "Item 1",
+      "_categories": [
+        {
+          "title": "Category 1",
+          "body": "Text for category 1",
+          "_graphic": {
+            "src": "course/en/images/single-width.png",
+            "alt": "",
+            "attribution": ""
+          }
+        },
+        {
+          "title": "Category 2",
+          "body": "Text for category 2",
+          "_graphic": {
+            "src": "course/en/images/single-width.png",
+            "alt": "",
+            "attribution": ""
+          }
+        }
+      ],
+      "_props": [
+        {
+          "label": "Prop 1",
+          "value": "Value 1"
+        },
+        {
+          "label": "Prop 2",
+          "value": "Value 2"
+        }
+      ]
+    },
+    {
+      "title": "Item 2",
+      "_categories": [
+        {
+          "title": "Category 1",
+          "body": "Text for category 1",
+          "_graphic": {
+            "src": "course/en/images/single-width.png",
+            "alt": "",
+            "attribution": ""
+          }
+        },
+        {
+          "title": "Category 2",
+          "body": "Text for category 2",
+          "_graphic": {
+            "src": "course/en/images/single-width.png",
+            "alt": "",
+            "attribution": ""
+          }
+        }
+      ],
+      "_props": [
+        {
+          "label": "Prop 1",
+          "value": "Value 1"
+        },
+        {
+          "label": "Prop 2",
+          "value": "Value 2"
+        }
+      ]
+    },
+    {
+      "title": "Item 3",
+      "_categories": [
+        {
+          "title": "Category 1",
+          "body": "Text for category 1",
+          "_graphic": {
+            "src": "course/en/images/single-width.png",
+            "alt": "",
+            "attribution": ""
+          }
+        },
+        {
+          "title": "Category 2",
+          "body": "Text for category 2",
+          "_graphic": {
+            "src": "course/en/images/single-width.png",
+            "alt": "",
+            "attribution": ""
+          }
+        }
+      ],
+      "_props": [
+        {
+          "label": "Prop 1",
+          "value": "Value 1"
+        },
+        {
+          "label": "Prop 2",
+          "value": "Value 2"
+        }
+      ]
+    }
+  ],
+
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}
