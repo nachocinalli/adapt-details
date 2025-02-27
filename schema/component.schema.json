@@ -1,0 +1,169 @@
+{
+  "$anchor": "details-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported Layout",
+          "default": "both",
+          "enum": ["full-width", "half-width", "both"],
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "instruction": {
+          "type": "string",
+          "title": "Instruction",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_setCompletionOn": {
+          "type": "string",
+          "title": "Set Completion On",
+          "default": "allItems",
+          "enum": ["inview", "allItems"],
+          "_adapt": {
+            "inputType": "Select",
+            "options": ["inview", "allItems"],
+            "validators": ["required"],
+            "help": "Define if completion is based on viewing all items or just the component"
+          }
+        },
+        "_items": {
+          "type": "array",
+          "title": "Items",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "default": "",
+                "_adapt": {
+                  "inputType": "Text",
+                  "help": "Title of the item",
+                  "translatable": true
+                }
+              },
+              "_categories": {
+                "type": "array",
+                "title": "Categories",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "title": "Category Title",
+                      "default": "",
+                      "_adapt": {
+                        "inputType": "Text",
+                        "help": "Title of the category",
+                        "translatable": true
+                      }
+                    },
+                    "body": {
+                      "type": "string",
+                      "title": "Body",
+                      "default": "",
+                      "_adapt": {
+                        "inputType": "RichText",
+                        "help": "Body content of the category",
+                        "translatable": true
+                      }
+                    },
+                    "_graphic": {
+                      "type": "object",
+                      "title": "Graphic",
+                      "properties": {
+                        "src": {
+                          "type": "string",
+                          "title": "Source",
+                          "default": "",
+                          "_adapt": {
+                            "inputType": "Image",
+                            "help": "Image source path"
+                          }
+                        },
+                        "alt": {
+                          "type": "string",
+                          "title": "Alt Text",
+                          "default": "",
+                          "_adapt": {
+                            "inputType": "Text",
+                            "help": "Alternative text for the image",
+                            "translatable": true
+                          }
+                        },
+                        "attribution": {
+                          "type": "string",
+                          "title": "Attribution",
+                          "default": "",
+                          "_adapt": {
+                            "inputType": "Text",
+                            "help": "Image attribution"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "_props": {
+                "type": "array",
+                "title": "Properties",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label",
+                      "default": "",
+                      "_adapt": {
+                        "inputType": "Text",
+                        "help": "Property label",
+                        "translatable": true
+                      }
+                    },
+                    "value": {
+                      "type": "string",
+                      "title": "Value",
+                      "default": "",
+                      "_adapt": {
+                        "inputType": "Text",
+                        "help": "Property value",
+                        "translatable": true
+                      }
+                    }
+                  }
+                },
+                "_adapt": {
+                  "help": "Additional properties for the item"
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Classes",
+                "default": "",
+                "_adapt": {
+                  "inputType": "Text",
+                  "help": "CSS classes to apply to the item"
+                }
+              }
+            }
+          },
+          "_adapt": {
+            "help": "List of items in the component"
+          }
+        }
+      }
+    }
+  }
+}

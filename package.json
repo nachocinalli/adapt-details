@@ -1,0 +1,17 @@
+{
+  "name": "adapt-details",
+  "version": "1.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/nachocinalli/adapt-details",
+  "bugs": "https://github.com/nachocinalli/adapt-details/issues",
+  "component": "details",
+  "targetAttribute": "_details",
+  "displayName": "Details",
+  "description": "A component to show details of a topic",
+  "main": "/js/adapt-details.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}

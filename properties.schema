@@ -1,0 +1,173 @@
+{
+  "type":"object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "mobileInstruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "title": "Mobile Instruction",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the mobile only instruction text",
+      "translatable": true
+    },
+    "_setCompletionOn": {
+      "type": "string",
+      "required": true,
+      "enum": ["inview", "allItems"],
+      "default": "allItems",
+      "title": "Set completion on",
+      "inputType": {
+        "type": "Select",
+        "options": ["inview", "allItems"]
+      },
+      "validators": ["required"],
+      "help": "Whether completion is based on the learner having viewed all the items - or just having viewed the component"
+    },
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Details items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Item title",
+            "inputType": "Text",
+            "validators": [],
+            "help": "",
+            "translatable": true
+          },
+          "_categories": {
+            "type": "array",
+            "required": false,
+            "title": "Categories",
+            "items": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Category title",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                },
+                "body": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Category body",
+                  "inputType": "TextArea",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                },
+                "_graphic": {
+                  "type": "object",
+                  "title": "Category graphic",
+                  "properties": {
+                    "src": {
+                      "type": "string",
+                      "required": true,
+                      "default": "",
+                      "title": "Select Graphic",
+                      "inputType": "Asset:image",
+                      "validators": ["required"],
+                      "help": ""
+                    },
+                    "alt": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Alternative Text",
+                      "inputType": "Text",
+                      "validators": [],
+                      "help": ""
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_props": {
+            "type" : "array",
+            "required": false,
+            "title": "Properties",
+            "items": {
+              "type": "object",
+              "required": false,
+              "properties": {
+                "label": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Property label",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                },
+                "value": {
+                  "type": "string",
+                  "required": false,
+                  "default": "",
+                  "title": "Property value",
+                  "inputType": "Text",
+                  "validators": [],
+                  "help": "",
+                  "translatable": true
+                }
+              }
+            }
+          },
+          "_classes": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "title": "Classes",
+            "inputType": "Text",
+            "validators": [],
+            "help": "CSS classes to apply to the item"
+          }
+        }
+      }
+    }
+  }
+}
