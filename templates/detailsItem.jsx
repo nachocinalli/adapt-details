@@ -1,3 +1,4 @@
+import device from 'core/js/device';
 import React, { useState } from 'react';
 import { templates, classes, compile } from 'core/js/reactHelpers';
 
