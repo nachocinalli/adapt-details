@@ -2,7 +2,7 @@ import device from 'core/js/device';
 import React, { useState } from 'react';
 import { templates, classes, compile } from 'core/js/reactHelpers';
 
-export default function DetailsItems({ selectedItem }) {
+export default function DetailsItems({ selectedItem, propsColumns }) {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
   const screenSize = device.screenSize;
   const hasColumns = propsColumns[screenSize] > 1;
