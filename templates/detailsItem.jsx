@@ -3,7 +3,8 @@ import { templates, classes, compile } from 'core/js/reactHelpers';
 
 export default function DetailsItems({ selectedItem }) {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
-  console.log(selectedItem?._categories);
+  const screenSize = device.screenSize;
+  const hasColumns = propsColumns[screenSize] > 1;
   return (
     <div className='details__item-container'>
       <div className='details__item-container-inner'>
@@ -40,7 +41,7 @@ export default function DetailsItems({ selectedItem }) {
         </div>
       </div>
 
-      <div className='details__item-props'>
+      <div className='details__item-props' style={hasColumns ? { gridTemplateColumns: `repeat(${propsColumns[screenSize]}, 1fr)` } : {}}>
         {selectedItem?._props.map((prop) => (
           <div key={prop.label} className='details__item-props-container'>
             <div className='details__item-props-label'>{prop.label}</div>

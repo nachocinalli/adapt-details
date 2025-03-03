@@ -5,7 +5,7 @@ export default function Details({ _items = [], onSelectedItem, ...props }) {
   const [selectedItemIndex, setSelectedItemIndex] = useState(0);
   const selectedItem = _items[selectedItemIndex] || {};
   const [isAnimating, setIsAnimating] = useState(selectedItem._isActive);
-
+  const { _propsColumns } = props;
   useEffect(() => {
     if (isAnimating) {
       const timeout = setTimeout(() => {
@@ -27,7 +27,7 @@ export default function Details({ _items = [], onSelectedItem, ...props }) {
         <div className={classes(['component__widget details__widget', selectedItem && selectedItem._classes, isAnimating && 'is-animating'])}>
           <templates.detailsHeader items={_items} setSelectedItem={setSelectedItem} selectedItemIndex={selectedItemIndex} />
 
-          <templates.detailsItem selectedItem={selectedItem} />
+          <templates.detailsItem selectedItem={selectedItem} propsColumns={_propsColumns} />
           <templates.detailsNav
             items={_items}
             setSelectedItem={setSelectedItem}
