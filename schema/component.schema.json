@@ -37,6 +37,33 @@
             "help": "Define if completion is based on viewing all items or just the component"
           }
         },
+        "_propsColumns": {
+          "type": "object",
+          "title": "Props Columns",
+          "default": {},
+          "properties": {
+            "small": {
+              "type": "number",
+              "title": "Small",
+              "default": 0
+            },
+            "medium": {
+              "type": "number",
+              "title": "Medium",
+              "default": 0
+            },
+            "large": {
+              "type": "number",
+              "title": "Large",
+              "default": 0
+            },
+            "xlarge": {
+              "type": "number",
+              "title": "Xlarge",
+              "default": 0
+            }
+          }
+        },
         "_items": {
           "type": "array",
           "title": "Items",
