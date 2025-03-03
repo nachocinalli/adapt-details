@@ -53,4 +53,15 @@
   &__item-nav-next .icon {
     .icon-controls-right;
   }
+  @media (min-width: 768px) {
+    &__item-container {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    &__item-container-inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
 }
