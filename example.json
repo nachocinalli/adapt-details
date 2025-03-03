@@ -10,6 +10,12 @@
   "body": "",
   "instruction": "",
   "_setCompletionOn": "allItems",
+  "_propsColumns": {
+    "small": 1,
+    "medium": 2,
+    "large": 4,
+    "xlarge": 4
+  },
   "_items": [
     {
       "title": "Item 1",
